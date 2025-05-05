@@ -1,0 +1,95 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #3c3c3c;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    height: 100vh; 
+}
+
+.hero {
+    background: linear-gradient(to right, #e732e7, #26cc29,rgb(214, 145, 17)); 
+    height: 100%;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    position: relative; 
+    padding-top: 175px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.7);
+    z-index: 1;
+}
+
+.hero-body {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 2rem;
+}
+
+.title {
+    font-size: 4rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, #4ab702, #dc1866,rgb(19, 84, 235)); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: heartbeat 1.5s infinite; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.subtitle {
+    font-size: 1.8rem;
+    color: #ff3377;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.button {
+    background-color: #ff4d94;
+    color: #ffffff;
+    border-radius: 25px;
+    font-size: 1.8rem;
+    padding: 10px 30px;
+    transition: transform 0.3s, background-color 0.3s;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: #e60073;
+    transform: scale(1.05);
+}
+
+.file-label {
+    color: #4a4a4a;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.file-name {
+    color: #333333;
+}
+
+.file-label:hover {
+    color: #ff6699;
+}
+
+.file-input {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}

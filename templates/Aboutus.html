@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - DermDetect</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            color: #333;
+            line-height: 1.6;
+            background-color: #f8f9fa;
+        }
+
+        header {
+            background-color: #1e7b8e;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .mission {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+
+        .mission h2 {
+            color: #1e7b8e;
+            margin-bottom: 15px;
+        }
+
+        .about-section {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+
+        .about-section h2 {
+            color: #1e7b8e;
+            margin-bottom: 15px;
+        }
+
+        .team-section {
+            margin: 40px 0;
+        }
+
+        .team-section h2 {
+            color: #1e7b8e;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .team-members {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .team-member {
+            flex: 1;
+            min-width: 300px;
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .team-member:hover {
+            transform: translateY(-5px);
+        }
+
+        .member-image {
+            
+            background-color: #ddd;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .member-info {
+            padding: 20px;
+        }
+
+        .member-info h3 {
+            color: #1e7b8e;
+            margin-bottom: 5px;
+        }
+
+        .member-title {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+
+        .technology-section, .privacy-section, .vision-section, .partners-section {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+
+        .technology-section h2, .privacy-section h2, .vision-section h2, .partners-section h2 {
+            color: #1e7b8e;
+            margin-bottom: 15px;
+        }
+
+        .partners-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .partner {
+            background-color: #f0f4f5;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        .contact-section {
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        .contact-section h2 {
+            color: #1e7b8e;
+            margin-bottom: 20px;
+        }
+
+        .contact-email {
+            display: inline-block;
+            margin-bottom: 15px;
+            color: #1e7b8e;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contact-email:hover {
+            text-decoration: underline;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            background-color: #1e7b8e;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .contact-btn:hover {
+            background-color: #0d5c6d;
+        }
+
+        .disclaimer {
+            background-color: #f0f4f5;
+            padding: 15px;
+            border-radius: 4px;
+            margin-top: 30px;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+
+        footer {
+            background-color: #0d5c6d;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .team-members {
+                flex-direction: column;
+            }
+        }
+                .home-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 12px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            background: linear-gradient(90deg, #ff6b6b, #ffcc5c, #51cf66, #339af0);
+            background-size: 400% 400%;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: transform 0.2s ease-in-out;
+            animation: wave 3s infinite linear;
+        }
+
+        .home-button:hover {
+            transform: scale(1.1);
+        }
+
+        @keyframes wave {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>About Us</h1>
+        <p>The Team Behind DermDetect</p>
+    </header>
+
+    <div class="container">
+        <section class="team-section">
+            <h2>Our Team</h2>
+            <div class="team-members">
+               <div class="team-member">
+                    <div class="member-image">
+                        <img src="../static/images/prema.png" alt="Dr. R. Prema" style="width: 100%; height:auto; border-radius: 10px;">
+                    </div>
+                    <div class="member-info">
+                        <h3>Dr. R. Prema</h3>
+                        <p class="member-title"><p><strong>Role:</strong>Project Guide</p>
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="../static/images/saketh.png" alt="Vuppaladhadium Sai Samarth Saketh" style="width:100%; height:auto; border-radius: 10px;">
+                    </div>
+                    <div class="member-info">
+                        <h3>Vuppaladhadium Sai Samarth Saketh</h3>
+                        <p class="member-title"><p><strong>Role:</strong>Developer, Designer</p>
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="../static/images/sreesa.png" alt="Panguluru Sreesa Sarma" style="width:100%; height:auto; border-radius: 10px;">
+                    </div>
+                    <div class="member-info">
+                        <h3>Panguluru Sreesa Sarma</h3>
+                        <p class="member-title"><p><strong>Role:</strong>Data Analyst</p>
+                    </div>
+                </div>
+<section class="mission">
+            <h2>Our Mission</h2>
+            <p>At DermDetect, we are committed to making skin disease detection accessible, accurate, and efficient. Our web-based platform combines medical expertise with cutting-edge artificial intelligence to help users identify potential skin conditions and connect them with appropriate healthcare resources.</p>
+        </section>
+
+        <section class="about-section">
+            <h2>Who We Are</h2>
+            <p>Founded in 2024, DermDetect was born from a collaboration between dermatologists, computer scientists, and public health advocates who recognized the need for better access to skin disease screening tools. Our diverse team brings together expertise in medical imaging, machine learning, dermatological diagnostics, and user experience design to create a platform that serves healthcare professionals and patients alike.</p>
+        </section>
+            </div>
+        </section>
+
+        <section class="technology-section">
+            <h2>Our Technology</h2>
+            <p>Our skin disease detection system utilizes a convolutional neural network trained on over 500,000 clinically verified images of various skin conditions. The technology can identify more than 200 different skin diseases with accuracy comparable to board-certified dermatologists. Our platform is continuously updated with the latest research findings and undergoes regular validation through clinical testing.</p>
+        </section>
+
+        <section class="privacy-section">
+            <h2>Our Commitment to Privacy</h2>
+            <p>We understand the sensitive nature of medical data. All images uploaded to our platform are encrypted, anonymized, and handled in full compliance with HIPAA regulations. We do not sell user data to third parties, and users maintain complete control over their information at all times.</p>
+        </section>
+
+        <section class="vision-section">
+            <h2>Our Vision for the Future</h2>
+            <p>We envision a world where preventable skin diseases are detected early, regardless of geography or socioeconomic status. We are actively working to expand our platform's capabilities to include more rare conditions and to make our technology available in low-resource settings through mobile solutions and partnerships with global health organizations.</p>
+        </section>
+        <section class="contact-section">
+            <h2>Get in Touch</h2>
+            <p>We welcome questions, feedback, and partnership inquiries.</p>
+            <a href="mailto:contact@dermdetect.com" class="contact-email">contact@dermdetect.com</a><br>
+            <a href="#" class="contact-btn">Contact Form</a>
+            
+            <div class="disclaimer">
+                <p>DermDetect is a diagnostic support tool and does not replace professional medical advice. Always consult with a healthcare provider for diagnosis and treatment of medical conditions.</p>
+            </div>
+        </section>
+    </div>
+    <button class="home-button" onclick="window.location.href='/'">Go to Home</button>
+    <footer>
+        <p>&copy; 2025 DermDetect. All rights reserved.</p>
+    </footer>
+</body>
+</html>

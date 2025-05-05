@@ -1,0 +1,63 @@
+COPY 1 CNN
+│
+├── backend
+│   ├── models
+│   │   ├── predict.py
+│   │   ├── Skin_Disease_CNN_Model.h5
+│   ├── JS
+│   │   └── User.js
+│   ├── server.js
+│   ├── package.json
+│   ├── package-lock.json
+│   └── node_modules
+│
+├── dataset
+│   ├── diseased_acne
+│   ├── diseased_dermatitis
+│   ├── diseased_eczema
+│   ├── diseased_melanoma
+│   ├── diseased_psoriasis
+│   ├── healthy_skin
+│   └── split_dataset.py
+│
+├── frontend
+│   ├── css
+│   │   ├── style.css
+│   │   └── predictcss
+│   ├── scripts
+│   │   ├── predict.js
+│   │   ├── index.html
+│   │   ├── Predict.html
+│   │   └── userprofile.html
+│
+├── models
+│   ├── cnn_model.py
+│   ├── CNN_Old_Reports
+│   ├── Transfer_Learning_Reports
+│   └── split.dataset
+│
+├── src
+│   ├── confusion_matrix_report.py
+│   ├── data_preprocessing.py
+│   ├── loss_accuracy_graph.py
+│   ├── rename.py
+│   ├── train_model.py
+│   └── visualize_misclassified_samples.py
+│
+├── reports
+│   ├── train
+│   │   ├── diseased_acne
+│   │   ├── diseased_dermatitis
+│   │   ├── diseased_eczema
+│   │   ├── diseased_melanoma
+│   │   ├── diseased_psoriasis
+│   │   ├── healthy_skin
+│   ├── validation
+│   │   ├── diseased_acne
+│   │   ├── diseased_dermatitis
+│   │   ├── diseased_eczema
+│   │   ├── diseased_melanoma
+│   │   ├── diseased_psoriasis
+│   │   ├── healthy_skin
+│
+└── File_Structure.txt

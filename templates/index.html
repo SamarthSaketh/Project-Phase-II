@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/fireworks-js@latest/dist/index.umd.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}">
+
+    <title>Skin Disease Detection</title>
+
+</head>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const usernameFromServer = "{{ username }}"; 
+        console.log("Username received from server:", usernameFromServer);
+
+        if (usernameFromServer) {
+            localStorage.setItem('username', usernameFromServer);
+        }
+    });
+</script>
+
+<body class="bg-gray-100 font-Poppins">
+ 
+    <canvas id="fireworks" style="display: none;"></canvas>
+   <header class="bg-white text-black p-4 shadow-lg">
+    <div class="container mx-auto flex justify-between items-center">
+        <h1 class="typing-container">DermDetect</h1>
+        <div class="flex space-x-6 items-center">
+            <div id="datetime" class="text-gray-700 text-sm">Loading date & time...</div>
+            <div id="location" class="text-gray-700 text-sm flex items-center">
+                <span class="loader"></span> Detecting location...
+            </div>
+            <div id="weather" class="text-gray-700 text-sm flex items-center">
+                <span class="loader"></span> Fetching weather...
+            </div>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li>
+                        <a href="/home" class="bg-blue-700 text-white px-3 py-2 rounded hover:bg-blue-500">
+                            Predict
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Aboutus" class="bg-blue-700 text-white px-3 py-2 rounded hover:bg-blue-500">
+                            About Us
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Resources" class="bg-blue-700 text-white px-3 py-2 rounded hover:bg-blue-500">
+                            Resources
+                        </a>
+                    </li>
+                    <li id="auth-link">
+                        <a href="/userprofile" class="bg-blue-700 text-white px-3 py-2 rounded hover:bg-blue-500">
+                            <i class="fas fa-user-circle"></i> Register/Login
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+    <main class="container mx-auto p-6">
+        <section id="overview" class="mb-12">
+            <h2>Project Overview</h2>
+            <p class="mt-4 text-gray-700">This project utilizes cutting-edge Convolutional Neural Networks (CNN) to detect and classify various skin diseases. By analyzing images of skin conditions, the model can provide accurate diagnostics, potentially improving patient outcomes. The aim is to create an accessible tool for both medical professionals and individuals seeking early diagnosis of skin conditions.</p>
+            <ul class="list-disc list-inside mt-4">
+                <li>Developing a user-friendly interface for image uploads.</li>
+                <li>Training the model with a diverse dataset of skin disease images.</li>
+                <li>Implementing real-time diagnostics for prompt medical attention.</li>
+            </ul>
+        </section>
+        <section id="diseases" class="mb-12">
+            <h2>Types of Skin Diseases</h2>
+            <div class="space-y-6 mt-4">
+                <div class="bg-white p-4 rounded-lg shadow-md transition-transform transform hover:scale-105">
+                    <h3 class="text-2xl font-semibold gradient-text">Acne</h3>
+                    <p>Acne is a common skin condition that occurs when hair follicles become clogged with oil and dead skin cells. It can cause pimples, blackheads, and cysts. Treatment options include:</p>
+                    <ul class="list-disc list-inside mt-2">
+                        <li>Topical retinoids</li>
+                        <li>Benzoyl peroxide</li>
+                        <li>Antibiotics</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-md transition-transform transform hover:scale-105">
+                    <h3 class="text-2xl font-semibold gradient-text">Dermatitis</h3>
+                    <p>Dermatitis refers to inflammation of the skin, characterized by red, itchy, and inflamed patches. Common treatments include:</p>
+                    <ul class="list-disc list-inside mt-2">
+                        <li>Corticosteroids</li>
+                        <li>Antihistamines</li>
+                        <li>Moisturizing ointments</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-md transition-transform transform hover:scale-105">
+                    <h3 class="text-2xl font-semibold gradient-text">Eczema</h3>
+                    <p>Eczema is a chronic condition resulting in red and itchy skin. It can be managed with:</p>
+                    <ul class="list-disc list-inside mt-2">
+                        <li>Moisturizers</li>
+                        <li>Topical steroids</li>
+                        <li>Immunosuppressants</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-md transition-transform transform hover:scale-105">
+                    <h3 class="text-2xl font-semibold gradient-text">Melanoma</h3>
+                    <p>Melanoma is a serious type of skin cancer arising from pigment-producing cells. Treatment options include:</p>
+                    <ul class="list-disc list-inside mt-2">
+                        <li>Surgery</li>
+                        <li>Chemotherapy</li>
+                        <li>Immunotherapy</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-md transition-transform transform hover:scale-105">
+                    <h3 class="text-2xl font-semibold gradient-text">Psoriasis</h3>
+                    <p>Psoriasis is an autoimmune condition leading to the rapid growth of skin cells. Treatment options consist of:</p>
+                    <ul class="list-disc list-inside mt-2">
+                        <li>Topical treatments</li>
+                        <li>Phototherapy</li>
+                        <li>Systemic medications</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="model">
+            <h2>Model Used</h2>
+            <p class="mt-4 text-gray-700">The project employs a deep learning model based on Convolutional Neural Networks (CNNs), which are particularly effective in image recognition tasks. The model is trained on a large dataset of labeled images representing various skin diseases, allowing it to learn intricate patterns and features associated with each condition.</p>
+            <ul class="list-disc list-inside mt-4">
+                <li>Data augmentation to improve model robustness</li>
+                <li>Transfer learning to leverage pre-trained models for enhanced accuracy</li>
+                <li>Fine-tuning specific layers to adapt to the skin disease classification task</li>
+            </ul>
+        </section>
+    </main>
+    <footer class="bg-white text-black text-center p-4 mt-12 shadow-lg">
+        <p>&copy; 2025 Skin Disease Detection Project</p>
+    </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/fireworks-js@latest/dist/index.umd.js"></script>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const username = localStorage.getItem('username');
+        const authLink = document.getElementById('auth-link');
+        const nav = authLink.parentElement;
+        if (username) {
+            authLink.innerHTML = `<span class="text-blue-700 font-bold">${username}</span> | <a href="#" onclick="logout()" class="text-red-600 font-bold">Logout</a>`;
+            const dashboardBtn = document.createElement("li");
+            dashboardBtn.innerHTML = `<a href="/Dashboard" class="bg-blue-700 text-white px-3 py-2 rounded hover:bg-blue-500">Dashboard</a>`;
+            nav.appendChild(dashboardBtn);
+
+            if (!localStorage.getItem('fireworksShown')) {
+                startFireworks();
+                localStorage.setItem('fireworksShown', 'true');
+            }
+        }
+    });
+
+    function logout() {
+        localStorage.removeItem('username');
+        localStorage.removeItem('fireworksShown'); // Reset fireworks when logging out
+        window.location.reload();
+    }
+
+    function startFireworks() {
+        const container = document.getElementById("fireworks");
+        container.style.display = "block";
+        const fireworks = new Fireworks.default(container);
+        fireworks.start();
+        setTimeout(() => {
+            fireworks.stop();
+            container.style.display = "none";
+        }, 3500);
+    }
+    
+        function updateDateTime() {
+            const now = new Date();
+            const formattedDateTime = now.toLocaleString("en-US", {
+                weekday: 'long', year: 'numeric', month: 'long', day: 'numeric',
+                hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true
+            });
+            document.getElementById("datetime").innerHTML = formattedDateTime;
+        }
+        setInterval(updateDateTime, 1000);
+        updateDateTime();
+
+        async function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(async function (position) {
+                    let lat = position.coords.latitude;
+                    let lon = position.coords.longitude;
+
+                    try {
+                        let locationRes = await fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}`);
+                        let locationData = await locationRes.json();
+
+                        let city = locationData.address.city ||
+                            locationData.address.town ||
+                            locationData.address.state_district ||
+                            locationData.address.state ||
+                            locationData.address.country || "Unknown";
+
+                        document.getElementById("location").innerHTML = `📍 ${city}`;
+
+                        let weatherRes = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true`);
+                        let weatherData = await weatherRes.json();
+
+                        let temp = weatherData.current_weather.temperature;
+                        let weatherCode = weatherData.current_weather.weathercode;
+
+                        let weatherDescription = {
+                            0: "☀️ Clear Sky",
+                            1: "🌤 Partly Cloudy",
+                            2: "☁️ Cloudy",
+                            3: "🌧 Light Rain",
+                            45: "🌫 Fog",
+                            48: "🌫 Dense Fog",
+                            51: "🌦 Drizzle",
+                            61: "🌧 Rain Showers",
+                            63: "🌧 Heavy Rain",
+                            71: "❄️ Snow Showers",
+                            80: "🌦 Scattered Showers",
+                            95: "⛈ Thunderstorms"
+                        };
+
+                        document.getElementById("weather").innerHTML = `🌡 ${temp}°C - ${weatherDescription[weatherCode] || "Weather Unknown"}`;
+                    } catch (error) {
+                        console.error("Error fetching location or weather:", error);
+                        document.getElementById("location").innerHTML = "❌ Error fetching location";
+                        document.getElementById("weather").innerHTML = "❌ Weather unavailable";
+                    }
+                }, function (error) {
+                    console.warn("Location access denied:", error);
+                    document.getElementById("location").innerHTML = "🚫 Location access denied";
+                    document.getElementById("weather").innerHTML = "❌ Weather unavailable";
+                });
+            } else {
+                document.getElementById("location").innerHTML = "🚫 Location not supported";
+                document.getElementById("weather").innerHTML = "❌ Weather unavailable";
+            }
+        }
+        getLocation();
+
+</script>
+
+</body>
+</html> 
+
+

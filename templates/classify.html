@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skin Disease Classification Results</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/classify.css"> <!-- Link to the separate CSS file -->
+</head>
+<body>
+<section class="hero">
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-one-quarter">
+                    <img class="pred_img" src="{{ url_for('send_file', filename=image_file_name) }}" alt="Uploaded Image">
+                </div>
+                <div class="column is-half result-container">
+                    <h2>This is a <span style="font-weight: bold; color:#1f6f8b;">{{ label }}</span></h2>
+                    <h2>Confidence: <span style="font-weight: bold; color:#ff5733;">{{ prob }}%</span></h2>
+                    <a href="/" class="button">Back to Home</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="/static/script.js"></script>
+</body>
+</html>

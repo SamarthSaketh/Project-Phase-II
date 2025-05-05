@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./static/css/style.css">
+  <title>Animated Login & Registration</title>
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+  <div class="square">
+    <i style="--clr:#ff357a;"></i>
+    <i style="--clr:#73a2ac;"></i>
+    <i style="--clr:#fff172;"></i>
+
+    <div class="login" id="login-form">
+      <h2>Login</h2>
+      <form id="loginForm" action="/login" method="POST">
+    <div class="inputBx">
+        <input type="email" name="email" id="loginEmail" placeholder="Email" required>
+    </div>
+    <div class="inputBx">
+        <input type="password" name="password" id="loginPassword" placeholder="Password" required>
+    </div>
+    <div class="inputBx">
+        <input type="submit" value="Login">
+    </div>
+</form>
+
+      <div class="links">
+        <a href="#" onclick="toggleForm('register')">Don't Have an account yet?<br>Register Here</a>
+      </div>
+    </div>
+    <div class="login" id="register-form" style="display: none;">
+      <h2>Register</h2>
+      <form id="registerForm">
+        <div class="inputBx">
+          <input type="text" id="fullName" placeholder="Full Name" required>
+        </div>
+        <div class="inputBx">
+          <input 
+            type="text" 
+            id="preferredName" 
+            placeholder="Preferred Username" 
+            required 
+            oninput="validatePreferredName(this)">
+          <small id="errorPreferredName" style="color: red; display: none;">Only alphabets are allowed!</small>
+        </div>
+
+        <div class="inputBx">
+          <input type="date" id="dob" placeholder="Date of Birth" required>
+        </div>
+        <div class="inputBx">
+          <input type="email" id="email" placeholder="Email" required>
+        </div>
+        <div class="inputBx">
+          <input type="password" id="password" placeholder="Password" required>
+        </div>
+        <div class="inputBx">
+          <input type="submit" value="Register">
+        </div>
+      </form>
+      <div class="links">
+        <a href="#" onclick="toggleForm('login')">Already have an account? Login</a>
+      </div>
+    </div>
+  </div>
+<script src="./static/js/script.js"></script>
+</body>
+</html>
