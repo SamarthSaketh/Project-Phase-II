@@ -1,0 +1,12 @@
+              precision    recall  f1-score   support
+
+        Acne       0.14      0.13      0.14        23
+  Dermatitis       0.33      0.22      0.27         9
+      Eczema       0.22      0.27      0.24        15
+Healthy Skin       0.21      0.21      0.21        29
+    Melanoma       0.46      0.48      0.47        66
+   Psoriasis       0.25      0.20      0.22        10
+
+    accuracy                           0.32       152
+   macro avg       0.27      0.25      0.26       152
+weighted avg       0.32      0.32      0.32       152

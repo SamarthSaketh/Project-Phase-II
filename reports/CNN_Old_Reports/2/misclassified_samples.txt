@@ -1,0 +1,19 @@
+File: D:\1.Ebooks\4th Year 1st Sem\Phase 1 Project\Skin Disease Detetction using CNN\split_dataset\validation\diseased_acne\32.jpg, True Label: 0, Predicted Label: 3
+File: D:\1.Ebooks\4th Year 1st Sem\Phase 1 Project\Skin Disease Detetction using CNN\split_dataset\validation\diseased_acne\50.jpg, True Label: 0, Predicted Label: 4
+File: D:\1.Ebooks\4th Year 1st Sem\Phase 1 Project\Skin Disease Detetction using CNN\split_dataset\validation\diseased_acne\img_30.jpg, True Label: 0, Predicted Label: 3
+File: D:\1.Ebooks\4th Year 1st Sem\Phase 1 Project\Skin Disease Detetction using CNN\split_dataset\validation\diseased_acne\img_32.jpg, True Label: 0, Predicted Label: 5
+File: D:\1.Ebooks\4th Year 1st Sem\Phase 1 Project\Skin Disease Detetction using CNN\split_dataset\validation\diseased_acne\img_49.jpg, True Label: 0, Predicted Label: 5
+File: D:\1.Ebooks\4th Year 1st Sem\Phase 1 Project\Skin Disease Detetction using CNN\split_dataset\validation\diseased_dermatitis\img_4.jpg, True Label: 1, Predicted Label: 5
+File: D:\1.Ebooks\4th Year 1st Sem\Phase 1 Project\Skin Disease Detetction using CNN\split_dataset\validation\diseased_eczema\3.jpg, True Label: 2, Predicted Label: 5
+File: D:\1.Ebooks\4th Year 1st Sem\Phase 1 Project\Skin Disease Detetction using CNN\split_dataset\validation\diseased_eczema\img_56.jpg, True Label: 2, Predicted Label: 5
+File: D:\1.Ebooks\4th Year 1st Sem\Phase 1 Project\Skin Disease Detetction using CNN\split_dataset\validation\diseased_eczema\img_59.jpg, True Label: 2, Predicted Label: 1
+File: D:\1.Ebooks\4th Year 1st Sem\Phase 1 Project\Skin Disease Detetction using CNN\split_dataset\validation\diseased_eczema\img_6.jpg, True Label: 2, Predicted Label: 5
+File: D:\1.Ebooks\4th Year 1st Sem\Phase 1 Project\Skin Disease Detetction using CNN\split_dataset\validation\diseased_eczema\img_70.jpg, True Label: 2, Predicted Label: 5
+File: D:\1.Ebooks\4th Year 1st Sem\Phase 1 Project\Skin Disease Detetction using CNN\split_dataset\validation\diseased_melanoma\ISIC_0000415_downsampled.jpg, True Label: 3, Predicted Label: 2
+File: D:\1.Ebooks\4th Year 1st Sem\Phase 1 Project\Skin Disease Detetction using CNN\split_dataset\validation\diseased_melanoma\img_28.jpg, True Label: 3, Predicted Label: 2
+File: D:\1.Ebooks\4th Year 1st Sem\Phase 1 Project\Skin Disease Detetction using CNN\split_dataset\validation\diseased_psoriasis\img_15.jpg, True Label: 4, Predicted Label: 5
+File: D:\1.Ebooks\4th Year 1st Sem\Phase 1 Project\Skin Disease Detetction using CNN\split_dataset\validation\diseased_psoriasis\img_43.jpg, True Label: 4, Predicted Label: 3
+File: D:\1.Ebooks\4th Year 1st Sem\Phase 1 Project\Skin Disease Detetction using CNN\split_dataset\validation\diseased_psoriasis\img_67.jpg, True Label: 4, Predicted Label: 1
+File: D:\1.Ebooks\4th Year 1st Sem\Phase 1 Project\Skin Disease Detetction using CNN\split_dataset\validation\diseased_psoriasis\img_73.jpg, True Label: 4, Predicted Label: 5
+File: D:\1.Ebooks\4th Year 1st Sem\Phase 1 Project\Skin Disease Detetction using CNN\split_dataset\validation\diseased_psoriasis\img_8.jpg, True Label: 4, Predicted Label: 5
+File: D:\1.Ebooks\4th Year 1st Sem\Phase 1 Project\Skin Disease Detetction using CNN\split_dataset\validation\healthy_skin\images (14).jpg, True Label: 5, Predicted Label: 2
